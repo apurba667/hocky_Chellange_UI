@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:get/get.dart';
+import 'package:hockey/const/const.dart';
 import 'package:hockey/screen/functions.dart';
+import 'package:hockey/screen/game4.dart';
 import 'package:hockey/screen/rules.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,30 +27,30 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 92,
-              width: 400,
+              height: Dimensions.height92,
+              width: Dimensions.width400,
               color: Colors.green,
               child: Stack(
                 children: [
-                  Positioned(left: 12,child: Container(
+                  Positioned(left: Dimensions.width20,child: Container(
 
-                    height: 20,
-                    width: 370,
+                    height: Dimensions.height20,
+                    width: Dimensions.width370,
                     color: Colors.white,
                   ),),
-                  Positioned(left: 12,child: Container(
+                  Positioned(left: Dimensions.width12,child: Container(
 
-                    height: 60,
-                    width: 20,
+                    height: Dimensions.height60,
+                    width: Dimensions.width20,
                     color: Colors.white,
                   ),),
-                  Positioned(right: 12,child: Container(
+                  Positioned(right: Dimensions.width12,child: Container(
 
-                    height: 60,
-                    width: 20,
+                    height: Dimensions.height60,
+                    width: Dimensions.width20,
                     color: Colors.white,
                   ),),
-                  Positioned(left: 95,top: 28, child: Text("Hockey Chellance",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w900,color: Colors.white),)),
+                  Positioned(left: Dimensions.width95,top: Dimensions.height28, child: Text("Hockey Chellance",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w900,color: Colors.white),)),
                 ],
               ),
             ),
@@ -56,20 +58,22 @@ class HomePage extends StatelessWidget {
              children: [
                Positioned(child: Container(
                 width: double.infinity,
-                 height: 600,
+                 height: Dimensions.height600,
                  child: Image.asset("assets/home.png",fit: BoxFit.cover,),
                )),
                Positioned(
-                   left: 66
+                   left: Dimensions.width66
                    ,
-                   top: 185,
+                   top: Dimensions.height185,
 
                      child: Bounce(
                        duration: Duration(milliseconds: 300),
-                      onPressed: (){},
+                      onPressed: (){
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Game4Screen()));
+                      },
                        child: Container(
-                 height: 50,
-                 width: 227,
+                 height: Dimensions.height50,
+                 width: Dimensions.width227,
                  decoration: BoxDecoration(
                        color: Colors.green,
                        borderRadius: BorderRadius.circular(20),
@@ -79,16 +83,16 @@ class HomePage extends StatelessWidget {
                      ),
                    ),
                Positioned(
-                   left: 66,
-                   top: 273,
+                   left: Dimensions.width66,
+                   top: Dimensions.height273,
                    child: Bounce(
                      duration: Duration(milliseconds: 300),
                      onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RulesScreen()));
                      },
                      child: Container(
-                     height: 50,
-                     width: 227,
+                     height: Dimensions.height50,
+                     width: Dimensions.width227,
                      decoration: BoxDecoration(
                        color: Colors.green,
                        borderRadius: BorderRadius.circular(20),
@@ -97,16 +101,16 @@ class HomePage extends StatelessWidget {
                ),
                    )),
                Positioned(
-                   left: 66,
-                   top: 361,
+                   left: Dimensions.width66,
+                   top: Dimensions.height361,
                    child: Bounce(
                      duration: Duration(milliseconds: 300),
                      onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FunctionScreen()));
                      },
                      child: Container(
-                     height: 50,
-                     width: 227,
+                     height: Dimensions.height50,
+                     width: Dimensions.width227,
                      decoration: BoxDecoration(
                        color: Colors.green,
                        borderRadius: BorderRadius.circular(20),

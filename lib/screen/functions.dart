@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:hockey/const/const.dart';
 
 class FunctionScreen extends StatelessWidget {
   const FunctionScreen({Key? key}) : super(key: key);
@@ -22,36 +24,48 @@ class FunctionScreen extends StatelessWidget {
             child: Image.asset("assets/home.png",fit: BoxFit.fill,),
           )),
           Positioned(
-              left: 60,
-              top: 204,
+              left: Dimensions.width60,
+              top: Dimensions.height204,
               child: Container(
-            height: 98,
-            width: 274,
+            height: Dimensions.height98,
+            width: Dimensions.width274,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.green,),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset("assets/speaker2.png"),
-                    Image.asset("assets/speaker.png")
+                    Bounce(
+                      duration: Duration(milliseconds: 300),
+                        onPressed: (){},
+                        child: Image.asset("assets/speaker2.png")),
+                    Bounce(
+                      duration: Duration(milliseconds: 300),
+                        onPressed: (){},
+                        child: Image.asset("assets/speaker.png"))
                   ],
                 ),
           )),
           Positioned(
-              top: 333,
-              left: 60,
+              top: Dimensions.height333,
+              left: Dimensions.width60,
               child: Container(
-            height: 98,
-            width: 274,
+            height: Dimensions.height98,
+            width: Dimensions.width274,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.green,),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                  Image.asset("assets/vibrateoff.png"),
-                  Image.asset("assets/vibrate.png"),
+                  Bounce(
+                    duration: Duration(milliseconds: 300),
+                      onPressed: (){},
+                      child: Image.asset("assets/vibrateoff.png")),
+                  Bounce(
+                    duration: Duration(milliseconds: 300),
+                      onPressed: (){},
+                      child: Image.asset("assets/vibrate.png")),
                 ],),
           ))
         ],

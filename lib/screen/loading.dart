@@ -1,5 +1,8 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../const/const.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({Key? key}) : super(key: key);
@@ -23,64 +26,64 @@ class LoadingScreen extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 92,
-                width: wd*0.99,
+                height: Dimensions.height92,
+                width: Dimensions.width400,
                 color: Colors.green,
                 child: Stack(
                   children: [
-                    Positioned(left: 12,child: Container(
+                    Positioned(left: Dimensions.width20,child: Container(
 
-                      height: 20,
-                      width: wd*0.90,
+                      height: Dimensions.height20,
+                      width: Dimensions.width370,
                       color: Colors.white,
                     ),),
-                    Positioned(left: 12,child: Container(
+                    Positioned(left: Dimensions.width12,child: Container(
 
-                      height: 60,
-                      width: 20,
+                      height: Dimensions.height60,
+                      width: Dimensions.width20,
                       color: Colors.white,
                     ),),
-                    Positioned(right: 12,child: Container(
+                    Positioned(right: Dimensions.width12,child: Container(
 
-                      height: 60,
-                      width: 20,
+                      height: Dimensions.height60,
+                      width: Dimensions.width20,
                       color: Colors.white,
                     ),),
-                    Positioned(left: 95,top: 28, child: Text("Hockey Chellance",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w900,color: Colors.white),)),
+                    Positioned(left: Dimensions.width95,top: Dimensions.height28, child: Text("Hockey Chellance",style: TextStyle(fontSize: 28,fontWeight: FontWeight.w900,color: Colors.white),)),
                   ],
                 ),
               ),
               Stack(
                 children: [
                   Positioned(child: Container(
-                    height: ht*0.72,
+                    height: Dimensions.height590,
                     width: double.infinity,
                     child: Image.asset("assets/loading_background.png",fit: BoxFit.fill,),
                   )),
                   Positioned(
-                      left: 187,
-                      top: 400,
+                      left: Dimensions.width187,
+                      top: Dimensions.height400,
                       child: Container(
 
                         child: Image.asset("assets/1.png",fit: BoxFit.fill,height: 27,width: 40,),
                       )),
                   Positioned(
-                      left: 175,
-                      top: 420,
+                      left: Dimensions.width175,
+                      top: Dimensions.height420,
                       child: Container(
 
                         child: Image.asset("assets/2.png",fit: BoxFit.fill,height: 44,width: 66,),
                       )),
                   Positioned(
-                      left: 145,
-                      top: 450,
+                      left: Dimensions.width145,
+                      top: Dimensions.height450,
                       child: Container(
 
                         child: Image.asset("assets/3.png",fit: BoxFit.fill,height: 77,width: 116,),
                       )),
                   Positioned(
-                      left: 100,
-                      top: 495,
+                      left: Dimensions.width100,
+                      top: Dimensions.height495,
                       child: Container(
 
                     child: Image.asset("assets/4.png",fit: BoxFit.fill,height: 100,width: 200,),

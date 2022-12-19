@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hockey/const/const.dart';
 
 class RulesScreen extends StatelessWidget {
   const RulesScreen({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class RulesScreen extends StatelessWidget {
             Positioned(child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 680,
+                height: Dimensions.height680,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.red,width: 2)
                 ),
